@@ -39,6 +39,10 @@ export class Cell {
     return this.getColumn().title;
   }
 
+  getPlaceholder(): string {
+    return this.getColumn().placeholder || this.getTitle();
+  }
+
   isEditable(): boolean {
     if (this.getRow().index === -1) {
       return this.getColumn().isAddable;

@@ -3,6 +3,7 @@ import { DataSet } from './data-set';
 export class Column {
 
   title: string = '';
+  placeholder: string = '';
   type: string = '';
   class: string = '';
   width: string = '';
@@ -54,6 +55,7 @@ export class Column {
 
   protected process() {
     this.title = this.settings['title'];
+    this.placeholder = this.settings['placeholder'];
     this.class = this.settings['class'];
     this.width = this.settings['width'];
     this.type = this.prepareType();
@@ -66,7 +68,7 @@ export class Column {
       .indexOf(this.settings['sortDirection']) !== -1 ? this.settings['sortDirection'] : '';
     this.isSortable = typeof this.settings['sort'] === 'undefined' ? true : !!this.settings['sort'];
     this.isEditable = typeof this.settings['editable'] === 'undefined' ? true : !!this.settings['editable'];
-    this.isAddable=typeof this.settings['addable'] === 'undefined' ? true : !!this.settings['addable'];
+    this.isAddable = typeof this.settings['addable'] === 'undefined' ? true : !!this.settings['addable'];
     this.sortDirection = this.prepareSortDirection();
 
     this.compareFunction = this.settings['compareFunction'];
