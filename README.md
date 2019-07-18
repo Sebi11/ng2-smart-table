@@ -10,6 +10,13 @@ ng2-smart-table component made with :heart:  by [Akveo team](http://akveo.com/).
 
 ![alt tag](src/assets/img/demo.gif)
 
+## Development
+
+- Run `npm install` in the "ng2-smart-table-demo" project.
+- Make your changes on the code in the `src/ng2-smart-table` folder and test them through the demo app with `npm start`.
+- Once you're done, run `npm run build:lib` in the "ng2-smart-table-demo" project.
+- The `dist\ng2-smart-table` folder will contain the output files: copy them to the repository which stores the build component library.
+
 ## Installation
 
 The library is available as npm package, so all you need to do is to run the following command:
